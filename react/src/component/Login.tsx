@@ -2,6 +2,8 @@ import React from "react";
 import { Row } from 'reactstrap';
 import { loggedIn } from '../App';
 import { useHistory } from 'react-router-dom';
+import Store from '../store/store';
+
 
 export default function Login() {
     const history = useHistory();
@@ -14,6 +16,7 @@ export default function Login() {
         <div>
             <h2>Login Page</h2>
             <hr />
+            <h1>{ Store.test }</h1>
             <Row className={'justify-content-md-center'}>
                 <aside className="col-sm-4">
                     <div className="card">
@@ -41,7 +44,6 @@ export default function Login() {
                             </form>
                         </article>
                     </div>
-
                 </aside>
             </Row>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from 'reactstrap';
 
 export default function GeneralLayout(props: any) {
-    debugger;
+    // debugger;
     const { component } = props;
     return (
         <Container>
