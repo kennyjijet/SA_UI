@@ -4,12 +4,15 @@ import {
   Router,
   Switch,
   Route,
+  BrowserRouter
 } from "react-router-dom";
 import Home from './component/Home';
 import Login from './component/Login'
 import GeneralLayout from './layout/GeneralLayout';
 import DashboardLayout from './layout/DashboardLayout';
 import { createBrowserHistory } from 'history';
+import { renderRoutes } from "react-router-config";
+import { Routers } from './routes';
 
 
 
@@ -24,14 +27,27 @@ import { createBrowserHistory } from 'history';
 
 export default function App() {
   return (
+    <React.Fragment>
+      <BrowserRouter>
+        <Switch>
+          <Routers />
+        </Switch>
+      </BrowserRouter>
+    </React.Fragment>
+  );
+};
+export const loggedIn: { status: boolean } = { status: false };
+
+/*
+  return (
     <Router history={history}>
-      {/*
+      {
           A <Switch> looks through all its children <Route>
           elements and renders the first one whose path
           matches the current URL. Use a <Switch> any time
           you have multiple routes, but you want only one
           of them to render at a time
-        */}
+        }
       <Switch>
         <AuthRoute>
           <Route exact path="/">
@@ -41,14 +57,14 @@ export default function App() {
         <Route path="/login">
           <GeneralLayout component={Login} />
         </Route>
-
       </Switch>
     </Router >
   );
 }
-
+  */
 // You can think of these components as "pages"
 // in your app.
+/* 
 
 export const loggedIn: { status: boolean } = { status: false };
 export const history = createBrowserHistory();
@@ -56,4 +72,6 @@ export const history = createBrowserHistory();
 function AuthRoute(rest: any, prop: any) {
   return loggedIn.status ? rest.children : <GeneralLayout component={Login} />;
 }
+
+*/
 
