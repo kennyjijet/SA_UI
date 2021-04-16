@@ -4,7 +4,8 @@ import {
   Router,
   Switch,
   Route,
-  BrowserRouter
+  BrowserRouter,
+  HashRouter
 } from "react-router-dom";
 import Home from './component/Home';
 import Login from './component/Login'
@@ -24,7 +25,7 @@ import { Routers } from './routes';
 // through the site. This preserves the browser history,
 // making sure things like the back button and bookmarks
 // work properly.
-
+// https://stackoverflow.com/questions/51974369/hashrouter-vs-browserrouter
 export default function App() {
   return (
     <React.Fragment>
@@ -39,6 +40,16 @@ export default function App() {
 export const loggedIn: { status: boolean } = { status: false };
 
 /*
+
+    <React.Fragment>
+      <HashRouter>
+        <Switch>
+          <Routers />
+        </Switch>
+      </HashRouter>
+    </React.Fragment>
+
+
   return (
     <Router history={history}>
       {

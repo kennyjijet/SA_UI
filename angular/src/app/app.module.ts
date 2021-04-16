@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FancyTitleComponent } from './fancy-title/fancy-title.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LOPAComponent } from './lopa/lopa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FancyTitleComponent,
-    DashboardComponent
+    DashboardComponent,
+    LOPAComponent
   ],
   imports: [
     BrowserModule,

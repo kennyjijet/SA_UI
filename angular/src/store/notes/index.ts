@@ -15,6 +15,7 @@ let state: InitialState = {
   notes: [],
 };
 
+
 export const store = new Subject<InitialState>();
 export const eventDispatcher = new Subject<Event>();
 

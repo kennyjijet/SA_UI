@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FancyTitleComponent } from './fancy-title/fancy-title.component';
+import { LOPAComponent } from './lopa/lopa.component';
 
 
 const routes: Routes = [
-  { path: '', component: FancyTitleComponent },
+  { path: '', component: LOPAComponent },
 ];
 
 @NgModule({
